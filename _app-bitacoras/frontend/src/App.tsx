@@ -7,6 +7,7 @@ import EntityPage from './pages/EntityPage'
 import Reportes from './pages/Reportes'
 import Calendario from './pages/Calendario'
 import Estadoproyecto from './pages/Estadoproyecto'
+import Sistema from './pages/Sistema'
 import PrivateRoute from './components/auth/PrivateRoute'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/usuarios" element={<PrivateRoute><EntityPage /></PrivateRoute>} />
           <Route path="/calendario" element={<PrivateRoute><Calendario /></PrivateRoute>} />
           <Route path="/recursos" element={<PrivateRoute><EntityPage /></PrivateRoute>} />
+          <Route path="/sistema" element={<PrivateRoute><Sistema /></PrivateRoute>} />
           <Route path="/estadoproyecto" element={<PrivateRoute><Estadoproyecto /></PrivateRoute>} />
           {/* Dynamic entity routes */}
           <Route path="/entity/:entityKey" element={<PrivateRoute><EntityPage /></PrivateRoute>} />

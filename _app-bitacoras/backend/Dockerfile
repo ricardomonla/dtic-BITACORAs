@@ -1,5 +1,8 @@
 FROM node:18-alpine
 
+# Instalar Docker CLI para poder ejecutar comandos Docker desde el contenedor
+RUN apk add --no-cache docker-cli
+
 # Establecer directorio de trabajo
 WORKDIR /app
 

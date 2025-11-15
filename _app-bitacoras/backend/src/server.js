@@ -26,6 +26,7 @@ const tareasRoutes = require('./routes/tareas');
 const recursosRoutes = require('./routes/recursos');
 const usuariosRelacionadosRoutes = require('./routes/usuarios_relacionados');
 const tareaRecursosRoutes = require('./routes/tarea-recursos');
+const systemRoutes = require('./routes/system');
 
 // Configuración de la aplicación
 const app = express();
@@ -89,6 +90,7 @@ app.use('/api/tecnicos', tecnicosRoutes);
 app.use('/api/tareas', tareasRoutes);
 app.use('/api/recursos', recursosRoutes);
 app.use('/api/tarea-recursos', tareaRecursosRoutes); // Rutas para asignaciones tarea-recurso
+app.use('/api/system', systemRoutes);
 // Ruta para servir el archivo de configuración YAML
 app.get('/api/config/entities.yml', (req, res) => {
   const path = require('path');

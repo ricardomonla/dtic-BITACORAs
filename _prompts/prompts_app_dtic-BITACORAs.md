@@ -1,6 +1,6 @@
 ---
 title: "DTIC-BITACORAs Template Framework"
-version: "1.6.0"
+version: "1.15.0"
 author: "[DTIC Organization]"
 description: "A specialized framework for automatic template selection and automation in the DTIC-BITACORAs bitácoras management system."
 language: "es"
@@ -259,7 +259,7 @@ plantillas:
     categoria: "documentacion"
     subcategoria: "versioning"
     prioridad: 1
-    palabras_clave: ["versioning", "documentation", "system", "version", "changelog", "update", "record", "database", "restore", "backup", "verification"]
+    palabras_clave: ["versioning", "documentation", "system", "version", "changelog", "update", "record", "database", "restore", "backup", "verification", "spanish", "package.json", "consistent"]
     patrones_matching:
       - "system documentation"
       - "versioning tasks"
@@ -268,7 +268,7 @@ plantillas:
       - "database restore documentation"
       - "system state documentation"
     uso_recomendado: "Perform system documentation and versioning tasks including version updates, changelog entries, and system state documentation"
-    descripcion: "Template for system documentation and versioning tasks, including database restore documentation, version updates, and system state recording"
+    descripcion: "Template for system documentation and versioning tasks, including database restore documentation, version updates, and system state recording. Mandatory requirements: CHANGELOG.md file must be maintained in Spanish language, not English and must use table format for each version entry with columns "Tipo" and "Descripción". Version updates must be applied consistently to both backend and frontend package.json files. Additionally, update hardcoded version displays in frontend UI code (e.g., Navbar.tsx) along with package.json updates. Implement dynamic version loading from package.json in Vite React apps by defining VERSION in vite.config.ts by reading package.json, and use import.meta.env.VERSION in components instead of hardcoding."
 
   task_resources_assignment:
     id: "DTIC-TASK-RESOURCES-001"
@@ -292,7 +292,7 @@ plantillas:
     categoria: "documentacion"
     subcategoria: "sistema"
     prioridad: 1
-    palabras_clave: ["documentar", "sistema", "changelog", "readme", "sistema_dtic_bitacoras", "documentacion", "completa", "arquitectura", "componentes", "apis", "base_datos"]
+    palabras_clave: ["documentar", "sistema", "changelog", "readme", "sistema_dtic_bitacoras", "documentacion", "completa", "arquitectura", "componentes", "apis", "base_datos", "español", "package.json", "versionado consistente"]
     patrones_matching:
       - "documentar sistema"
       - "actualizar documentacion"
@@ -305,7 +305,7 @@ plantillas:
       - "apis documentadas"
       - "base de datos documentada"
     uso_recomendado: "Documentar completamente el sistema DTIC Bitácoras en los archivos CHANGELOG.md, README.md y SISTEMA_DTIC_BITACORAS.md"
-    descripcion: "Plantilla para documentación completa del sistema incluyendo arquitectura, componentes, APIs, base de datos y funcionalidades"
+    descripcion: "Plantilla para documentación completa del sistema incluyendo arquitectura, componentes, APIs, base de datos y funcionalidades. Requisitos obligatorios: El archivo CHANGELOG.md debe mantenerse en idioma español, no inglés y debe utilizar formato de tabla para cada entrada de versión con columnas "Tipo" and "Descripción". Las actualizaciones de versión deben aplicarse de manera consistente en ambos archivos package.json de backend y frontend. Implementar carga dinámica de versión desde package.json en aplicaciones Vite React definiendo VERSION en vite.config.ts leyendo package.json, y usar import.meta.env.VERSION en componentes en lugar de hardcoding."
 
   documentacion_actualizacion:
    id: "DTIC-DOCS-UPD-001"
@@ -433,15 +433,21 @@ plantillas:
      categoria: "datos"
      subcategoria: "backup_restore"
      prioridad: 1
-     palabras_clave: ["backup", "restore", "database", "system administration"]
+     palabras_clave: ["backup", "restore", "database", "system administration", "delete", "download", "eliminar", "descargar", "archivos", "files"]
      patrones_matching:
        - "backup operations"
        - "restore database"
        - "system backup"
        - "database restore"
        - "backup and restore"
-     uso_recomendado: "Perform backup and restore operations for the DTIC Bitácoras system"
-     descripcion: "Template for backup and restore operations including database backups, system state preservation, and restoration procedures"
+       - "delete backup"
+       - "download backup"
+       - "eliminar backup"
+       - "descargar backup"
+       - "manage backup files"
+       - "gestionar archivos backup"
+     uso_recomendado: "Perform backup and restore operations for the DTIC Bitácoras system, including creating, restoring, deleting, and downloading backup files"
+     descripcion: "Template for complete backup management operations including database backups, system state preservation, restoration procedures, file deletion, and download functionality"
 
      # CLASIFICACIÓN AUTOMÁTICA
 clasificacion:
@@ -761,6 +767,15 @@ Esta política aplica a:
 
 ## Version History
 
+- **Version 1.15.0:** 2025-11-14 - Updated DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates to specify the Vite config approach for dynamic version loading: define VERSION in vite.config.ts by reading package.json, and use import.meta.env.VERSION in components.
+- **Version 1.14.0:** 2025-11-14 - Updated DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates to specify the current 'with' syntax for JSON import in Vite React apps: `import packageJson from '../../package.json' with { type: 'json' };` and access with `packageJson.version`.
+- **Version 1.13.0:** 2025-11-14 - Updated DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates to specify the correct assert syntax for JSON import in Vite React apps: `import packageJson from '../../package.json' assert { type: 'json' };` and access with `packageJson.version`.
+- **Version 1.12.0:** 2025-11-14 - Updated DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates to specify the correct method for dynamic version loading from package.json in Vite React apps: use `import * as packageJson from '../../package.json'` and access with `packageJson.version`.
+- **Version 1.11.0:** 2025-11-14 - Added requirement for dynamic version loading from package.json in frontend UI components instead of hardcoding as mandatory step in DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates.
+- **Version 1.10.0:** 2025-11-14 - Added mandatory requirement to update hardcoded version displays in frontend UI code (e.g., Navbar.tsx) along with package.json updates in DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates.
+- **Version 1.9.0:** 2025-11-14 - Updated DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates to include mandatory requirements for CHANGELOG.md table format with "Tipo" and "Descripción" columns, and consistent version updates in both backend and frontend package.json files.
+- **Version 1.8.0:** 2025-11-14 - Updated DTIC-SYS-DOC-001 and DTIC-SYSTEM-DOCS-001 templates to include mandatory requirements for CHANGELOG.md in Spanish and consistent version updates in both backend and frontend package.json files.
+- **Version 1.7.0:** 2025-11-14 - Updated DTIC-BACKUP-RESTORE-001 template to include delete and download operations for backup files
 - **Version 1.6.0:** 2025-11-14 - Added DTIC-BACKUP-RESTORE-001 template for backup and restore operations
 - **Version 1.5.0:** 2025-11-14 - Nueva plantilla DTIC-SYSTEM-001 para modificaciones y administración del sistema, incluyendo gestión de usuarios, permisos, configuraciones de seguridad y ajustes de parámetros.
 - **Version 1.4.0:** 2025-11-14 - Nueva plantilla DTIC-PDF-IMPORT-001 para importación de datos desde archivos PDF a la base de datos, incluyendo extracción de texto, parsing estructurado, mapeo de schema, inserción con error handling y manejo de multi-line entries, duplicados y problemas de conexión.

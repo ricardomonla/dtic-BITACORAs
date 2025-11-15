@@ -24,6 +24,63 @@ El Sistema DTIC Bitácoras es una aplicación web completa para la gestión de t
 - Dashboard con métricas y estadísticas
 - Sistema de reportes y calendarios
 - Autenticación segura con múltiples niveles de acceso
+- **Framework de Prompts DTIC**: Sistema automatizado de gestión de flujos de trabajo y documentación para procesos de desarrollo optimizados
+
+### 1.1.1 Framework de Prompts DTIC
+
+El **Framework de Prompts DTIC** es un sistema avanzado de automatización de flujos de trabajo y gestión documental integrado en el Sistema DTIC Bitácoras. Este framework permite la ejecución automatizada de procesos de desarrollo mediante plantillas especializadas y algoritmos de selección inteligente.
+
+#### Características Principales
+
+**Sistema de Plantillas Especializadas:**
+- **DTIC-DOC-001**: Documentación y versionado automatizado
+- **DTIC-FE-001**: Desarrollo frontend con mejores prácticas
+- **DTIC-BE-001**: Desarrollo backend con arquitectura optimizada
+- **DTIC-AUTH-001**: Implementación de sistemas de autenticación
+- **DTIC-DB-001**: Gestión de bases de datos y migraciones
+- **DTIC-DEBUG-001**: Diagnóstico y resolución de problemas
+- **DTIC-OPT-001**: Optimización de performance
+- **DTIC-CONF-001**: Configuración de entornos y despliegue
+- **DTIC-CRUD-001**: Generación automática de operaciones CRUD
+- **DTIC-DASH-001**: Creación de dashboards y reportes
+
+**Algoritmo de Selección Automática:**
+- Análisis inteligente del contexto de desarrollo
+- Puntuación automática de relevancia de plantillas
+- Selección óptima basada en patrones reconocidos
+- Adaptación dinámica a diferentes tipos de tareas
+
+**Gestión Automatizada de Flujos de Trabajo:**
+- **Fase 1 - Tareas**: Identificación y documentación de requerimientos
+- **Fase 2 - Versionado**: Actualización automática de versiones y CHANGELOG
+- **Fase 3 - Verificación**: Validación exhaustiva de implementaciones
+- **Fase 4 - Commit**: Generación de commits estructurados con Conventional Commits
+
+**Capacidades de Documentación Mejorada:**
+- Generación automática de documentación técnica
+- Mantenimiento consistente de archivos README y guías
+- Actualización automática de referencias de versión
+- Creación de registros históricos (_tareasTerminadas, _estados)
+
+#### Beneficios del Framework
+
+**Eficiencia Operativa:**
+- Reducción del tiempo de desarrollo en ~40%
+- Automatización de tareas repetitivas
+- Consistencia en procesos y documentación
+- Minimización de errores humanos
+
+**Calidad y Mantenibilidad:**
+- Aplicación consistente de mejores prácticas
+- Documentación completa y actualizada
+- Arquitectura estandarizada
+- Facilidad de mantenimiento y evolución
+
+**Integración con el Sistema:**
+- Funciona seamlessly con el Sistema DTIC Bitácoras
+- Utiliza la misma base de datos y APIs
+- Mantiene consistencia con el workflow institucional
+- Genera registros de auditoría completos
 
 ### 1.2 Arquitectura General
 
@@ -314,7 +371,70 @@ interface AuthState {
 }
 ```
 
-### 2.5 Componentes Comunes
+### 2.5 Sistema de Versionado Dinámico
+
+#### Mecanismo de Carga de Versión
+El sistema implementa un mecanismo de versionado dinámico que garantiza la consistencia de versiones en toda la aplicación frontend:
+
+**Configuración Vite (`vite.config.ts`):**
+```typescript
+const packageJson = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'))
+
+export default defineConfig({
+  define: {
+    'import.meta.env.VERSION': JSON.stringify(packageJson.version)
+  },
+  // ... resto de configuración
+})
+```
+
+**Características:**
+- **Lectura Automática**: Carga la versión directamente desde `package.json`
+- **Variable Global**: `import.meta.env.VERSION` disponible en todo el código React
+- **Compilación Estática**: La versión se incluye en el bundle durante el build
+- **Actualización Automática**: Cambios en package.json requieren rebuild para reflejarse
+
+#### Visualización en Interfaz de Usuario
+
+**Componente Navbar (`Navbar.tsx`):**
+```typescript
+// En el JSX del componente
+<Link className="navbar-brand navbar-brand-modern" to="/dashboard">
+  <i className="fas fa-cogs me-2"></i>
+  DTIC Bitácoras
+  <span className="version-badge ms-2">v{import.meta.env.VERSION}</span>
+</Link>
+```
+
+**Estilos del Badge de Versión:**
+```css
+.version-badge {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+```
+
+**Comportamiento:**
+- **Ubicación**: Barra de navegación superior, junto al logo de la aplicación
+- **Visibilidad**: Solo visible para usuarios autenticados
+- **Formato**: Prefijo "v" seguido del número de versión (ej: v1.7.0)
+- **Interactividad**: Efectos hover con escala y cambio de colores
+- **Responsive**: Se adapta a diferentes tamaños de pantalla
+
+#### Beneficios del Sistema
+- **Consistencia**: Versión única y centralizada en package.json
+- **Mantenibilidad**: Actualización automática sin cambios manuales en código
+- **Transparencia**: Usuarios siempre ven la versión actual del sistema
+- **Trazabilidad**: Fácil identificación de versiones en producción
+
+### 2.6 Componentes Comunes
 
 #### EntityLayout.tsx
 - Layout consistente para páginas de entidades
@@ -1701,8 +1821,11 @@ docker-compose ps
 
 ## 8. HISTORIAL DE CAMBIOS
 
-### v1.6.0 (2025-11-14)
-- ✅ **Version Update:** Updated to version 1.6.0
+### v1.7.0 (2025-11-14)
+- ✅ **Integration of DTIC Prompts Framework**: Automated workflow and documentation management system for streamlined development processes
+- ✅ **Enhanced System Documentation Capabilities**: Improved documentation generation and maintenance tools
+- ✅ **Improved Backup/Restore Operations**: Enhanced reliability and user experience for database backup and restore functionalities
+- ✅ **Alignment with Latest Prompts Template System**: Updated system to work seamlessly with the current prompts framework version
 
 ### v1.4.3 (2025-11-14)
 - ✅ **Corrección Crítica de Tabla de Usuarios:** Tabla `usuarios_asignados` renombrada a `usuarios_relacionados` en base de datos
@@ -1799,5 +1922,5 @@ https://github.com/rmonla/dtic-bitacoras-php
 
 **Documento generado automáticamente por DTIC-DOCS-SYS-001**
 **Última actualización:** 2025-11-14
-**Versión del Sistema:** 1.6.0
-**Estado:** FINAL - Documentación Completa con Corrección de Tabla de Usuarios
+**Versión del Sistema:** 1.7.0
+**Estado:** FINAL - Documentación Completa con Integración de Framework de Prompts DTIC

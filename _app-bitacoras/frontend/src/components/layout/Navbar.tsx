@@ -60,7 +60,10 @@ const Navbar = () => {
     { path: '/recursos', icon: 'fas fa-server', label: 'Recursos', color: 'text-info', group: 'gestion' },
     { path: '/tareas', icon: 'fas fa-tasks', label: 'Tareas', color: 'text-warning', group: 'operaciones' },
     { path: '/tecnicos', icon: 'fas fa-users', label: 'Técnicos', color: 'text-success', group: 'operaciones' },
-    ...(user?.role === 'admin' ? [{ path: '/usuarios', icon: 'fas fa-user-cog', label: 'Usuarios', color: 'text-dark', group: 'gestion' }] : []),
+    ...(user?.role === 'admin' ? [
+      { path: '/usuarios', icon: 'fas fa-user-cog', label: 'Usuarios', color: 'text-dark', group: 'gestion' },
+      { path: '/sistema', icon: 'fas fa-cogs', label: 'Sistema', color: 'text-secondary', group: 'sistema' }
+    ] : []),
     { path: '/reportes', icon: 'fas fa-chart-bar', label: 'Reportes', color: 'text-danger', group: 'reportes' }
   ]
 
@@ -104,6 +107,10 @@ const Navbar = () => {
         }
 
         .nav-group-operaciones {
+          margin-right: 20px;
+        }
+
+        .nav-group-sistema {
           margin-right: 20px;
         }
 
@@ -406,7 +413,7 @@ const Navbar = () => {
           <Link className="navbar-brand navbar-brand-modern" to="/dashboard">
             <i className="fas fa-cogs me-2"></i>
             DTIC Bitácoras
-            <span className="version-badge ms-2">v1.4.3</span>
+            <span className="version-badge ms-2">v{import.meta.env.VERSION}</span>
           </Link>
 
           {/* Hamburger Menu for Mobile */}

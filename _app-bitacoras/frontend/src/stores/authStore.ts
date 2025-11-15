@@ -47,6 +47,7 @@ export const useAuthStore = create<AuthState>()(
             throw new Error(data.message || 'Error en el inicio de sesión')
           }
 
+          console.log('AuthStore login: setting user and token', { user: data.data.user, token: !!data.data.token })
           set({
             user: data.data.user,
             token: data.data.token,
@@ -69,6 +70,7 @@ export const useAuthStore = create<AuthState>()(
 
       checkAuth: async () => {
         const { token } = get()
+        console.log('AuthStore checkAuth: token present?', !!token)
         if (!token) return
 
         try {
@@ -80,11 +82,13 @@ export const useAuthStore = create<AuthState>()(
 
           if (response.ok) {
             const data = await response.json()
+            console.log('AuthStore checkAuth: user set from /me', { user: data.data.user })
             set({
               user: data.data.user,
               isAuthenticated: true,
             })
           } else {
+            console.log('AuthStore checkAuth: token invalid, logging out')
             // Token inválido, hacer logout
             get().logout()
           }

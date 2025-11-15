@@ -34,6 +34,7 @@ services:
       - ./backend:/app
       - /app/node_modules
       - ../../:/host  # Montar el directorio padre del proyecto para acceder a _app-npm
+      - /var/run/docker.sock:/var/run/docker.sock  # Montar socket Docker para ejecutar comandos Docker
     networks:
       - dtic_network
 

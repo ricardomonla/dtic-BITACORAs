@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { pool } = require('../server');
+const { pool } = require('../database');
 
 // Función helper para ejecutar queries
 const executeQuery = async (query, params = []) => {

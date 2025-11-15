@@ -1,0 +1,953 @@
+lstRECUs
+
+DETALLES
+
+ap-GOB-02 | GOB-Pasillo
+
+Ap 2 en Gobierno; SN: F3608; #AP001
+
+ap-ICI-01 | ICI-Pasillo
+
+#AP002
+
+ap-ICI-02 | ICI-Pasillo
+
+#AP003
+
+ap-AUD-01 | ICI-Auditorio
+
+SN: 3451; #AP004
+
+ap-TIC-01 | TIC-Pasillo
+
+SN: F3605; #AP005
+
+ap-TIC-02 | TIC-Pasillo
+
+SN: F3606; #AP006
+
+ap-DAS-01 | DAS-DASUTeN
+
+SN: F3600; #AP007
+
+ap-GOB-01 | GOB-Pasillo
+
+#AP008
+
+ap-EnGenius [??] | LABs-GAIA
+
+#AP010
+
+ap-CANT-01 | OCT-Cantina
+
+SN: F3598; #AP011
+
+ap-CANT-02 | OCT-Cantina
+
+SN: F3602; #AP012
+
+ap-CANT-03 | OCT-Cantina
+
+SN: F3599; #AP013
+
+ap-IEL-01 | IEL-Pasillo
+
+#AP014
+
+ap-IEL-02 | IEL-Pasillo
+
+SN: 3453; #AP015
+
+ap-IEL-03 | LAB-Pasillo
+
+SN: F3597; #AP016
+
+ap-IEL-04 | LAB-Pasillo
+
+SN: F3607; #AP017
+
+ap-IEM-01 | IEM-Pasillo
+
+SN: F3609; #AP018
+
+ap-IEM-02 | IEM-Pasillo
+
+SN: F3610; #AP019
+
+ap-IEM-03 | IEM-Pasillo
+
+SN: F3611; #AP020
+
+ap-IEM-04 | IEM-Pasillo
+
+SN: F3603; #AP021
+
+cam-KAPTIVO-01 | IEL-Pasillo
+
+MODELO: MLNPNX; #CAM001
+
+cel-GGONZALEZ | GOB-SecACAD
+
+USR: Germán GONZALEZ; #CEL001
+
+dsp-FFPrint | OCT-Guardia
+
+Finger Face Printt; #DSP001
+
+dvr-CamsGuardia | OCT-RRHH
+
+DVR Cámaras Guardias; #DVR001
+
+imp-HP-01 | TIC-Biblioteca
+
+HP LASER MFP 137fnw; #IMP002
+
+imp-HP-02 | OCT-DepBAS
+
+USR: Agostina CHAVEZ; MOD: P2055 DN; #IMP003
+
+imp-HP-03 | DAS-DASUTeN
+
+MOD: SMART TANK 515; #IMP004
+
+imp-HP-04 | GOB-SecEXT
+
+USR: Karina LOTO; MOD: SMART TANK 515; #IMP005
+
+imp-HP-05 | GOB-Decanato
+
+MOD: SMART TANK 533; #IMP006
+
+imp-RICOH-02 | OCT-POSG
+
+USR: Karina SALDIS, RICOH Aficio MP 301; #IMP007
+
+imp-RICOH-03 | GOB-SecACAD
+
+RICOH IM 430; #IMP008
+
+imp-RICOH-04 | OCT-CentroEstudiantes
+
+MOD: MP 501; #IMP009
+
+imp-RICOH-05 | TIC-DTIC
+
+MOD: SP3710DN; #IMP010
+
+imp-RICOH-01 | TIC-Títulos
+
+RICOH SP377, USR: Araceli ZALAZAR; #IMP011
+
+imp-SAMSUNG-01 | OCT-PSICO
+
+USR: Luciana TOLEDO; MOD: ML 2850; #IMP012
+
+imp-LANIER-01 | OCT-SSAE
+
+USR: Ignacio MARTINEZ; MOD: MP402; #IMP013
+
+imp-HP-06 | GOB-SecPLAN
+
+USR: Oscar GALLARDO; MOD: LJPro-MFP_M130Fw; #IMP014
+
+imp-HP-07 | GOB-MesaENTRADA
+
+HP-LaserJet-Pro-MFP-M426fdw; #IMP015
+
+netb-UTNLR-NETB01 | TIC-DTIC
+
+#NETB001
+
+not-AZALAZAR | TIC-Títulos
+
+USR: Araceli ZALAZAR; #NOT002
+
+not-CGATICA | TIC-DTIC
+
+#NOT003
+
+not-ELUCERO | OCT-DepIEL
+
+USR: Emilce LUCERO; #NOT004
+
+not-FRUSSO | OCT-DepBAS
+
+USR: Federico RUSSO; #NOT005
+
+not-GSOTOMAYOR | OCT-DepIEL
+
+USR: Germán SOTOMAYOR; #NOT006
+
+not-HWHITAKER | OCT-POSG
+
+USR: Héctor WHITAKER; #NOT007
+
+not-JBRIZUELA | OCT-DepICI
+
+USR: Juan BRIZUELA; #NOT008
+
+not-JNIETO | GOB-Decanato
+
+USR: Jose NIETO; #NOT009
+
+not-JPAEZ | OCT-DepBAS
+
+USR: Juan PAEZ; #NOT010
+
+not-JPOLI | GOB-SecPLAN
+
+USR: Jose POLI; #NOT011
+
+not-MHEREDIA | OCT-DepIEM
+
+USR: Martín HEREDIA; #NOT012
+
+not-EVTos1 | ICI-Auditorio
+
+HOST: UTNLR-TIC-NOT01; #NOT013
+
+not-GGONZALEZ | GOB-SecACAD
+
+USR: Germán GONZALEZ; #NOT014
+
+not-DSOTOMAYOR | GOB-SecADM
+
+USR: Denise SOTOMAYOR; #NOT015
+
+lstRECUs
+
+DETALLES
+
+not-MLPALAZZI | GOB-SecACAD
+
+USR: Maria Luisa PALAZZI; #NOT016
+
+not-FMONLA | ICI-Auditorio
+
+USR: Franco MONLA; #NOT017
+
+not-RMONLA | TIC-DTIC
+
+USR: Ricardo MONLA; #NOT018
+
+not-SecExt-not-1 | GOB-SecEXT
+
+USR: Antonio ABDALA; #NOT019
+
+not-VNIETO | OCT-DepIEM
+
+USR: Víctor NIETO; #NOT020
+
+not-GGRACIA | OCT-DepIEM
+
+USR: Germán GRACIA; #NOT021
+
+not-DSIMONE | Docente
+
+USR: Dante SIMONE; #NOT022
+
+not-MMERCADO | Docente
+
+USR: Manuel MERCADO; #NOT023
+
+not-FMONLA | ICI-Auditorio
+
+USR: Franco MONLA; #NOT024
+
+not-JGRACIA | OCT-CarrATermino
+
+USR: Jorge GRACIA; #NOT025
+
+not-Auditorio Expositor | ICI-Auditorio
+
+#NOT026
+
+not-SREINOSOS | OCT-SeCyT
+
+USR: Carlos SANCHEZ REINOSOS; HOST: DESKTOP-TIL47OO; #NOT027
+
+not-JNIETO-not- | GOB-Decanato
+
+USR: José NIETO; #NOT028
+
+not | ICI-GAIA
+
+#NOT029
+
+not-UTNLR-NOT030 | OCT-SeCyT
+
+USR: Dr. Sanchez Reinozo; MODELO: BANGHO-MAX-L5; #NOT030
+
+pc-UTNLR90 | GOB-LEGO
+
+USR: Celeste TOLEDO; #PC001
+
+pc-CenTEL | TIC-Servidores
+
+Central Telónica Digital; #PC002
+
+pc-Centro Estudiantes | OCT-CentroEstudiantes
+
+#PC003
+
+pc-FRLR1905 | GOB-LEGO
+
+USR: Verónica STEWART; #PC004
+
+pc-UTNLR68 | ICI-Auditorio
+
+AudiTEMP; #PC005
+
+pc-UTNLR69 | GOB-SecCyT
+
+USR: Laura CARRIZO; #PC006
+
+pc-UTNLR01 | GOB-SecADM
+
+USR: Denise SOTOMAYOR; #PC007
+
+pc-UTNLR02 | GOB-SecACAD
+
+USR: Germán GONZALEZ; #PC008
+
+pc-UTNLR03 | OCT-RRHH
+
+USR: Marcela LOPEZ; #PC009
+
+pc-UTNLR89 | OCT-RRHH
+
+USR: Marcela LOPEZ; #PC010
+
+pc-UTNLR06 | GOB-Patrimonio
+
+USR: Armando BARRIONUEVO; #PC011
+
+pc-UTNLR09 | OCT-CarrATermino
+
+USR: Guillermo HERRERA; #PC012
+
+pc-UTNLR10 | OCT-DepICI
+
+USR: Juan BRIZUELA; #PC013
+
+pc-UTNLR11 | GOB-MesaENTRADA
+
+USR: UTNLR11; #PC014
+
+pc-UTNLR12 | GOB-LEGO
+
+USR: Ileana BANDERA; #PC015
+
+pc-UTNLR13 | GOB-MesaENTRADA
+
+USR: Estefanía RUEDA; #PC016
+
+pc-UTNLR14 | TIC-Biblioteca
+
+USR: Mónica ALVAREZ; #PC017
+
+pc-UTNLR15 | TIC-Biblioteca
+
+USR: Silvia ROMERO; #PC018
+
+pc-UTNLR17 | GOB-SecPLAN
+
+USR: Jose POLI; #PC019
+
+pc-UTNLR17 | OCT-PSICO
+
+USR: Flavia CACERES; #PC020
+
+pc-UTNLR18 | OCT-PSICO
+
+USR: Luciana TOLEDO; #PC021
+
+pc-UTNLR19 | GOB-SecEXT
+
+USR: Karina LOTO; #PC022
+
+pc-UTNLR20 | GOB-SecEXT
+
+USR: Henry VEGA; #PC023
+
+pc-UTNLR24 | OCT-Bedelía
+
+USR: Mirtha TORRES; #PC024
+
+pc-UTNLR25 | OCT-RRHH
+
+USR: Florecia VAZQUEZ; #PC025
+
+pc-UTNLR28 | OCT-SSAE
+
+#PC026
+
+pc-UTNLR29 | OCT-POSG
+
+USR: Karina SALDIS; #PC027
+
+pc-UTNLR31 | OCT-DepIEM
+
+USR: Germán GRACIA; #PC028
+
+pc-UTNLR32 | TIC-Biblioteca
+
+#PC029
+
+pc-UTNLR33 | OCT-DepBAS
+
+USR: Juan PAEZ; #PC030
+
+pc-UTNLR34 | DAS-DASUTeN
+
+USR: ALMIRON_y_MOLINA; #PC031
+
+pc-UTNLR36 | OCT-DepIEM
+
+#PC032
+
+pc-UTNLR37 | TIC-Títulos
+
+USR: Araceli ZALAZAR; #PC033
+
+pc-UTNLR66 | TIC-DTIC
+
+USR: Abel SALAZAR; #PC034
+
+pc-UTNLR38 | OCT-CarrATermino
+
+USR: Martín VERGARA; #PC035
+
+pc-UTNLR39 | OCT-Bedelía
+
+USR: Enzo VARGAS ??Buscar??; #PC036
+
+pc-UTNLR40 | OCT-SSAE
+
+USR: Ignacio MARTINEZ; #PC037
+
+pc-UTNLR41 | GOB-SecEXT
+
+USR: Karina LOTO; #PC038
+
+lstRECUs
+
+DETALLES
+
+pc-UTNLR42 | OCT-DepBAS
+
+USR: Agostina CHAVEZ; #PC039
+
+pc-UTNLR44 | TIC-DTIC
+
+USR: Wilfredo KRUPP; #PC040
+
+pc-UTNLR51 | GOB-SecEXT
+
+USR: Antonio ABDALA; #PC041
+
+pc-UTNLR52 | OCT-DepIEL
+
+#PC042
+
+pc-UTNLR54 | OCT-DepICI
+
+#PC043
+
+pc-UTNLR55 | OCT-DepIEM
+
+USR: Víctor NIETO; #PC044
+
+pc-UTNLR56 | GOB-FirmaDIGITAL
+
+USR: Carolina RUARTEZ; #PC045
+
+pc-UTNLR57 | TIC-DTIC
+
+USR: Cristian GATICA; #PC046
+
+pc-UTNLR58 | OCT-DepIEL
+
+USR: Walter SOTOMAYOR; #PC047
+
+pc-LEGO | GOB-LEGO
+
+USR: Verónica STEWART; #PC048
+
+pc-UTNLR60 | OCT-DepBAS
+
+USR: Federico RUSSO; #PC049
+
+pc-UTNLR60? | LABs-Electrónica
+
+#PC050
+
+pc-UTNLR61 | LABs-Electrónica
+
+#PC051
+
+pc-UTNLR62 | LABs-Electrónica
+
+#PC052
+
+pc-UTNLR63 | LABs-Electrónica
+
+#PC053
+
+pc-UTNLR64 | DAS-DASUTeN
+
+HOST: pc-DASU0; AnyDesk: 1519388003; #PC054
+
+pc-UTNLR65 | LABs-Electrónica
+
+#PC055
+
+pc-UTNLR67 | GOB-Decanato
+
+USR: Carolina RUARTEZ; #PC056
+
+pc-UTNLR73 | GOB-SecEXT
+
+USR: Leonardo PEROSIO; SN: F3680; #PC057
+
+pc-UTNLR70 | OCT-DepICI
+
+USR: Juan BRIZUELA; SN: F3672; #PC058
+
+pc-UTNLR71 | OCT-CarrATermino
+
+USR: Guillermo HERRERA; SN: F3687; #PC059
+
+pc-UTNLR75 | OCT-Bedelía
+
+USR: Sonia MOLINA; #PC060
+
+pc-UTNLR76 | OCT-CarrATermino
+
+USR: Guillermo HERRERA; #PC061
+
+pc-UTNLR74 | GOB-LEGO
+
+USR: Verónica STEWART; #PC062
+
+pc-UTNLR77 | TIC-Biblioteca
+
+USR: Jéssica SANCHEZ; #PC063
+
+pc-UTNLR78 | OCT-SSAE
+
+MOD: DELL 32731; #PC064
+
+pc-UTNLR79 | OCT-SSAE
+
+MOD: DELL 32732; #PC065
+
+pc-UTNLR80 | OCT-SSAE
+
+MOD: DELL 32733; #PC066
+
+pc-UTNLR81 | OCT-SSAE
+
+MOD: DELL 32734; #PC067
+
+pc-UTNLR85 | TIC-DTIC
+
+USR: Roberto CANIZA; #PC068
+
+pc-UTNLR82 | GOB-MesaENTRADA
+
+#PC069
+
+pc-UTNLR86 | GOB-Pasillo
+
+USR: Karina MORENO; #PC070
+
+pc-UTNLR88 | LABs-GEMLaR
+
+USR: Marcelo GOMEZ; #PC071
+
+pc-UTNLR87 | LABs-Serv.-Generales
+
+USR: Pedro CASTRO; #PC072
+
+pc-FRLR1521 | ICI-GAIA
+
+USR: Cecilia BALDO; #PC073
+
+pc-UTNLR32732 | GOB-SecADM
+
+USR: Denise SOTOMAYOR; #PC074
+
+pc-UTNLR-F3679 | OCT-Bedelía
+
+USR: Enzo VARGAS; #PC075
+
+pc-UTNLR91 | OCT-POSG
+
+USR: Karina SALDIS; #PC076
+
+pc-DCALDERON | GOB-FRELaR
+
+USR: Daniel CALDERON; #PC078
+
+pc-NuevaPC079 |
+
+#PC079
+
+pc-UTNLR92 | GOB-SecADM
+
+USR: Karina MORENO; #PC080
+
+pc-UTNLR93 | GOB-SecADM
+
+USR: Ileana BANDERA; #PC081
+
+pc-UTNLR94 | GOB-SecADM
+
+USR: Denise SOTOMAYOR; #PC082
+
+pc-UTNLR95 | OCT-RRHH
+
+USR: Florencia VAZQUEZ; #PC083
+
+pc-UTNLR96 | OCT-RRHH
+
+USR: Marcela LOPEZ; #PC084
+
+pc-UTNLR97 | GOB-SecADM
+
+USR: Armando BARRIONUEVO; #PC085
+
+pc-UTNLR98 | GOB-SecPLAN
+
+USR: Martín HEREDIA, UTNID: 31599, Marca EXO; #PC086
+
+pc-MOC1 | OCT-SeCyT
+
+USR: Carlos SANCHEZ REINOSOS; #PC087
+
+pc-MOC2 | OCT-SeCyT
+
+USR: Carlos SANCHEZ REINOSOS; #PC088
+
+pcv-DTIC | TIC-Servidores-PMox1
+
+#PCV001
+
+pcv-XenCenter | TIC-DTIC-NS7
+
+#PCV002
+
+pcv-DTIC-RRHH | TIC-DTIC-VNS07b
+
+#PCV003
+
+pcv-TestRED | TIC-Servidores-PMox1
+
+#PCV004
+
+lstRECUs
+
+DETALLES
+
+pcv-Serviio-WX | TIC-Servidores-PMox1
+
+#PCV005
+
+pcv-DASU1 | DAS-DASUTeN
+
+USR: Andrea ALMIRON; HOST: UTNLR83; #PCV006
+
+pcv-DASU2 | DAS-DASUTeN
+
+USR: Romina MOLINA; HOST: UTNLR84; #PCV007
+
+pcv-MiniOS-0_w10 | TIC-Servidores-PMox2
+
+#PCV008
+
+pcv-DASU3 | DAS-DASUTeN
+
+USR: Eugenia RIVEROS; HOST: UTNLR84; #PCV009
+
+pcv-UTNLR250729-B | TIC-DTIC-NS8
+
+#PCV010
+
+rut-WF-ACAREDITACION | GOB-SecPLAN
+
+USR: Oscar GALLARDO; #RUT001
+
+rut-WF-GAIA | ICI-GAIA
+
+Router WF GAIA; #RUT002
+
+rut-WF-CIDomóticaT | LABs-GAIA
+
+USR: Marcelo GOMEZ; #RUT003
+
+rut-WF-Centro Estudiantes | OCT-CentroEstudiantes
+
+#RUT004
+
+rut-WF-ACREDI | TIC-DTIC
+
+#RUT005
+
+rut-DHCP 8x TL WR741N | TIC-Servidores
+
+#RUT006
+
+rut-MKT1 | TIC-Servidores
+
+Router Mikrotic Nuevo; #RUT007
+
+rut-ISPT-IPT-01 | TIC-Servidores
+
+DHCP 16x; #RUT008
+
+rut-ISPT-IPT-02 | TIC-Servidores
+
+#RUT009
+
+rut-ISP-TECO-01 | TIC-Servidores
+
+Router ISP de RECTORADO; #RUT010
+
+rut-WF-Fagdut1 | IEM-Pasillo
+
+#RUT011
+
+rut-MKT0 | TIC-DTIC
+
+Router Viejo, actualmente en desuso..; #RUT012
+
+srv-NS7 | TIC-DTIC
+
+Sistema ServTec (GLPI); #SRV001
+
+srv-NS8 | TIC-DTIC
+
+Servidor de Gestión; USR: Ricardo MONLA; #SRV002
+
+srv-NS1 | TIC-DTIC
+
+#SRV003
+
+srv-Central - Elastix | TIC-Servidores
+
+#SRV004
+
+srv-LEONK | TIC-DTIC
+
+X: Antiguo servidor de sistemas de gestión, Proximamente servidor DASUTEN.; #SRV005
+
+srv-PMOX1 | TIC-Servidores
+
+Servidor de Máquinas Virtales; #SRV006
+
+srv-PMOX2 | TIC-Servidores
+
+#SRV007
+
+srv-XEN1 | TIC-Servidores
+
+Servidor de VMs Citrix XENCenter.; #SRV008
+
+srv-Xen2 | TIC-Servidores
+
+#SRV009
+
+srv-S2 | TIC-DTIC-srvPMOX3
+
+#SRV010
+
+srv-PMOX3 | TIC-Servidores
+
+#SRV011
+
+srvv-MAURIK | TIC-Servidores-Xen2
+
+Servidor de Dominio (AD); #SRVV001
+
+srvv-Deb11-Base | TIC-Servidores-PMox1
+
+#SRVV002
+
+srvv-Koha | TIC-Servidores-PMox1
+
+#SRVV003
+
+srvv-MySQL | TIC-Servidores-PMox1
+
+#SRVV004
+
+srvv-Odoo | TIC-Servidores-PMox1
+
+#SRVV005
+
+srvv-Proxy3x | TIC-Servidores-PMox1
+
+#SRVV006
+
+srvv-SITIO | TIC-Servidores-Pmox1
+
+Servidor Web Sitio UTNLR; USR: Roberto CANIZA; #SRVV007
+
+srvv-UNIFI | TIC-Servidores-PMox1
+
+#SRVV008
+
+srvv-Sitio-0 | TIC-Servidores-PMox2
+
+Servidor de Sitemas Webs Menores; #SRVV009
+
+srvv-DTIC | TIC-Servidores-Pmox1
+
+#SRVV010
+
+srv-FTPyIPCAMs | TIC-Servidores-Xen2
+
+X: EnDesuso, Ex servidor FTP e IPCams; HOST: NS04; #SRVV011
+
+srvv-Sitio1 | TIC-Servidores-Xen1
+
+#SRVV012
+
+srvv-Sitio2 | TIC-Servidores-Xen1
+
+#SRVV013
+
+srvv-DHCPyDNS | TIC-Servidores-Xen1
+
+HOST: VNS5; #SRVV014
+
+srvv-PROXY-PRIV | TIC-Servidores-Xen2
+
+HOST: NS03; #SRVV015
+
+srvv-PROXY-PUB | TIC-Servidores-Xen2
+
+HOST: NS01; #SRVV016
+
+srv-SiGesDOCs | TIC-Servidores-Xen1
+
+X: EnDesuso, Ex servidor de documentos UTNLR; HOST: NS10; #SRVV017
+
+srv-SysACAD-WEB | TIC-Servidores-Xen2
+
+Servidor Web Microsoft (IIS) sistema SysACAD-Web; CRED: sysacadweb->$UTNlr...; #SR
+
+srvv-DockerTemp | TIC-Servidores-PMox1
+
+#SRVV019
+
+srvv-TORRI | TIC-Servidores-PMox3
+
+Servidor Virtual de DNS [coreDNS]; #SRVV020
+
+srvv-TELEs | TIC-Servidores-DELL1
+
+#SRVV021
+
+srvv-DATA | TIC-srvPMOX3
+
+#SRVV022
+
+srvv-FENIX | TIC-Servidores-PMox3
+
+#SRVV023
+
+srvv-DNS | TIC-Servidores-Pmox1
+
+Servidor Virtual de DNS [coreDNS]; #SRVV024
+
+lstRECUs
+
+DETALLES
+
+srvv-SITIO2 | TIC-Servidores-PMox3
+
+SITIO2 UTNLR; USR: Roberto CANIZA; #SRVV025
+
+srvv-UPTIME | TIC-Servidores-PMox3
+
+Servidor de estados [UpTime Kuma]; #SRVV026
+
+srvv-N8N | TIC-Servidores-PMox3
+
+Servidor de Automatizaciones N8N; #SRVV027
+
+sw-SW-01 | GOB-Pasillo
+
+#SW001
+
+sw-SW-02 | ICI-Pasillo
+
+#SW002
+
+sw-SW-03 | ICI-Pasillo
+
+#SW003
+
+sw-SW-04 | IEM-Pasillo
+
+#SW004
+
+sw-SW-05 | TIC-Pasillo
+
+#SW005
+
+sw-SW-06 | IEL-Pasillo
+
+#SW006
+
+sw-SW-07 | TIC-Servidores
+
+#SW007
+
+sw-TPLink | TIC-DTIC
+
+MOD: SG2218; #SW008
+
+tbl-TBL-01 | OCT-Bedelía
+
+ALUMNOS; #TBL001
+
+tel-TELIP-01 | DAS-DASUTeN
+
+#TEL001
+
+tel-TELIP-02 | OCT-PSICO
+
+#TEL002
+
+tel-TELIP-03 | TIC-DTIC
+
+USR: Ricardo MONLA; MARCA: YEALINK; #TEL003
+
+tv-TV01 |
+
+#TV001
+
+tv-TV02 |
+
+#TV002
+
+tv-TV03 |
+
+#TV003
+
+tv-TV05 | ICI-Auditorio
+
+#TV004
+
+tv-TV06 | TIC-DTIC
+
+MARCA: Kanji; #TV005
+
+tvbox-TVBox01 | OCT-Ingreso
+
+#TVBOX001
+
+

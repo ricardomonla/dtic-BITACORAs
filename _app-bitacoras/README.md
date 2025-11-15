@@ -13,6 +13,7 @@ El sistema está diseñado para:
 - **Seguimiento de Tareas**: Administrar y monitorear tareas técnicas asignadas a técnicos
 - **Auditoría Completa**: Mantener registro detallado de todas las operaciones del sistema
 - **Reportes y Estadísticas**: Generar informes sobre el estado del inventario y rendimiento
+- **Framework de Prompts DTIC**: Sistema automatizado de gestión de flujos de trabajo y documentación para procesos de desarrollo optimizados
 
 ## 🚀 Inicio Rápido
 
@@ -115,6 +116,7 @@ El sistema sigue una arquitectura de **3 capas** con contenedores Docker:
 - **UI Components**: Bootstrap + FontAwesome
 - **Rutas**: React Router con protección de rutas
 - **Configuración**: Sistema de entidades dinámicas vía YAML
+- **Versionado Dinámico**: Carga automática de versión desde package.json mediante Vite config
 
 #### 🚀 Backend (Node.js + Express)
 - **Runtime**: Node.js 18 con Alpine Linux
@@ -254,6 +256,26 @@ Los **reportes** son consultas estructuradas que permiten analizar el estado y r
 - Calendarios de tareas
 - Reportes personalizados
 - Exportación de datos
+
+### 🔢 Sistema de Versionado Dinámico
+
+El sistema implementa un mecanismo de versionado dinámico que garantiza la consistencia de versiones en toda la aplicación:
+
+#### 📋 Carga Automática de Versión
+- **Configuración Vite**: El archivo `vite.config.ts` lee automáticamente la versión desde `package.json`
+- **Variable Global**: Define `import.meta.env.VERSION` disponible en todo el frontend
+- **Actualización Automática**: Cambios en `package.json` se reflejan inmediatamente en la interfaz
+
+#### 🎨 Visualización en Interfaz
+- **Badge de Versión**: Se muestra en la barra de navegación principal junto al logo
+- **Formato**: `v{versión}` (ej: v1.7.0)
+- **Estilos**: Badge moderno con gradiente y efectos hover
+- **Ubicación**: Navbar superior, siempre visible para usuarios autenticados
+
+#### 🔄 Mantenimiento de Versiones
+- **Semantic Versioning**: Seguimiento de cambios según MAJOR.MINOR.PATCH
+- **CHANGELOG**: Registro detallado de cambios por versión
+- **Consistencia**: Versiones sincronizadas entre package.json, documentación y código
 
 ## 📁 Estructura del Proyecto
 
@@ -830,7 +852,7 @@ El proyecto se desarrolló siguiendo una metodología estructurada:
 **Desarrollado por:** Lic. Ricardo MONLA
 **Institución:** Universidad Tecnológica Nacional - Facultad Regional La Rioja
 **Departamento:** Departamento de Servidores, Dirección de TIC
-**Proyecto:** Sistema DTIC Bitácoras v1.6.0
+**Proyecto:** Sistema DTIC Bitácoras v1.7.0
 **Fecha:** Noviembre 2025
 
 ### Contacto
@@ -861,5 +883,5 @@ Para soporte técnico o consultas sobre el desarrollo del sistema, contactar al 
 **Desarrollado por:** Lic. Ricardo MONLA
 **Institución:** Universidad Tecnológica Nacional - Facultad Regional La Rioja
 **Departamento:** Departamento de Servidores, Dirección de TIC
-**Proyecto:** Sistema DTIC Bitácoras v1.6.0
+**Proyecto:** Sistema DTIC Bitácoras v1.7.0
 **Última actualización:** Noviembre 2025
