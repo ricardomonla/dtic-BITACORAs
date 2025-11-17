@@ -272,18 +272,25 @@ const Dashboard = () => {
 
   return (
     <div className="container mt-4">
-      {/* Dashboard Header */}
-      <div className="dashboard-header fade-in">
-        <h1 className="dashboard-title">
-          <i className="fas fa-chart-line me-3"></i>
-          {user ? `Bienvenido de vuelta, ${user.first_name}!` : 'Bienvenido al Sistema DTIC Bitácoras'}
-        </h1>
-        <p className="dashboard-subtitle">
-          {user
-            ? 'Sistema de Gestión de Tareas y Recursos - Departamento de Tecnología de la Información y Comunicación'
-            : 'Sistema de Gestión de Tareas y Recursos del DTIC - UTN La Rioja'
-          }
-        </p>
+      {/* Header */}
+      <div className="row mb-4">
+        <div className="col-12">
+          <div className="d-flex align-items-center mb-3">
+            <i className="fas fa-chart-line fa-2x text-primary me-3"></i>
+            <div>
+              <h1 className="h3 mb-0">
+                {user ? `Bienvenido de vuelta, ${user.first_name}!` : 'Dashboard - DTIC Bitácoras'}
+              </h1>
+              <p className="text-muted mb-0">
+                {user
+                  ? 'Sistema de Gestión de Tareas y Recursos - Departamento de Tecnología de la Información y Comunicación'
+                  : 'Sistema de Gestión de Tareas y Recursos del DTIC - UTN La Rioja'
+                }
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="row mt-4">
           <div className="col-md-3">
             <div className="card h-100 border-0 bg-light">

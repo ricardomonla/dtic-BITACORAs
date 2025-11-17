@@ -1,3 +1,18 @@
+## [2.0.0] - 2025-11-17
+
+| Tipo | Descripción |
+|------|-------------|
+| Agregado | Sistema completo de comandas dual con nomenclatura diferenciada (G/E) |
+| Agregado | Comanda-G 01: Documentación y establecimiento del mecanismo de comandas |
+| Agregado | Comanda-E 02: Corrección completa de estética visual (temas oscuro/claro) |
+| Agregado | Comanda-E 03: Estandarización de cabeceras módulos gestión |
+| Agregado | Comanda-E 04: Ajustes de color y contraste en sidebar |
+| Agregado | Comanda-E 05: Verificación y resolución de problemas de cache |
+| Mejorado | Variables CSS completas para temas oscuro y claro con overrides |
+| Mejorado | Sistema de referencias cruzadas entre orquestadores |
+| Corregido | Visibilidad perfecta de texto en tablas, sidebar y paneles de perfil |
+| Documentado | Mecanismo completo de comandas con instrucciones detalladas |
+
 ## [1.9.4] - 2025-11-17
 
 ### Cambios

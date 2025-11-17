@@ -2,6 +2,112 @@ import { useEffect, useState } from 'react'
 import { useAuthStore } from '../stores/authStore'
 import toast from 'react-hot-toast'
 
+// CSS para estética mejorada de tablas (consistente con EntityPage.tsx)
+const styles = `
+  /* Estética mejorada para tablas */
+  .entity-table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  .entity-table thead th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border: none;
+    padding: 1rem 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .entity-table tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f1f3f4;
+  }
+
+  .entity-table tbody tr:hover {
+    background-color: #f8f9ff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .entity-table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+  }
+
+  .entity-table tbody tr:nth-child(even):hover {
+    background-color: #f0f2ff;
+  }
+
+  .entity-table tbody td {
+    padding: 0.875rem 0.75rem;
+    vertical-align: middle;
+    border: none;
+  }
+
+  /* Estilos para badges en celdas */
+  .entity-table .badge {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* Responsive improvements */
+  @media (max-width: 768px) {
+    .entity-table {
+      font-size: 0.875rem;
+    }
+
+    .entity-table thead th,
+    .entity-table tbody td {
+      padding: 0.5rem 0.375rem;
+    }
+  }
+
+  /* Dark theme overrides for entity tables */
+  .dark-theme .entity-table {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .dark-theme .entity-table thead th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .dark-theme .entity-table tbody tr {
+    border-bottom-color: #555555;
+  }
+
+  .dark-theme .entity-table tbody tr:hover {
+    background-color: #4a4a4a;
+  }
+
+  .dark-theme .entity-table tbody tr:nth-child(even) {
+    background-color: #2d2d2d;
+  }
+
+  .dark-theme .entity-table tbody tr:nth-child(even):hover {
+    background-color: #404040;
+  }
+
+  .dark-theme .entity-table tbody td {
+    color: #ffffff;
+  }
+`
+
+// Inyectar estilos
+if (typeof document !== 'undefined') {
+  const styleSheet = document.createElement('style')
+  styleSheet.textContent = styles
+  document.head.appendChild(styleSheet)
+}
+
 interface BackupFile {
   filename: string
   size: number
@@ -419,7 +525,7 @@ const Sistema = () => {
             <div className="card-body">
               {backups.length > 0 ? (
                 <div className="table-responsive">
-                  <table className="table table-hover">
+                  <table className="table entity-table">
                     <thead>
                        <tr>
                          <th>Archivo</th>

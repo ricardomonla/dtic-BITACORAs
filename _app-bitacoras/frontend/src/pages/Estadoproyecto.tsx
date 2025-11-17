@@ -1,13 +1,16 @@
 const Estadoproyecto = () => {
   return (
     <div className="container mt-4">
-      <div className="page-header">
-        <div>
-          <h1 className="page-title">
-            <i className="fas fa-project-diagram me-3"></i>
-            Estado del Proyecto
-          </h1>
-          <p className="page-subtitle">Monitorea el estado general de los proyectos</p>
+      {/* Header */}
+      <div className="row mb-4">
+        <div className="col-12">
+          <div className="d-flex align-items-center mb-3">
+            <i className="fas fa-project-diagram fa-2x text-primary me-3"></i>
+            <div>
+              <h1 className="h3 mb-0">Estado del Proyecto</h1>
+              <p className="text-muted mb-0">Monitorea el estado general de los proyectos</p>
+            </div>
+          </div>
         </div>
       </div>
 

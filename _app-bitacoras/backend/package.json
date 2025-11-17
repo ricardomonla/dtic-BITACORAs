@@ -1,6 +1,6 @@
 {
   "name": "dtic-bitacoras-api",
-  "version": "1.9.4",
+  "version": "2.0.0",
   "description": "API backend para DTIC Bitácoras - Sistema de gestión de técnicos y tareas",
   "main": "src/server.js",
   "scripts": {
