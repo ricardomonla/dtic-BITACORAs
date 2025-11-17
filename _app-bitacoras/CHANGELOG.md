@@ -1,3 +1,12 @@
+## [1.9.4] - 2025-11-17
+
+### Cambios
+- Definir formato y estructura del archivo de comanda
+- Crear script registrar-avance.sh para automatización
+- Actualizar orquestadores principal y específico
+- Crear template de comanda
+- Agregar script a package.json
+
 ## [1.9.3] - 2025-11-17
 
 ### Cambios
