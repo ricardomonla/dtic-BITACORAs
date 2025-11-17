@@ -268,11 +268,18 @@ const styles = `
   }
 
   /* Botones de acción mejorados */
+  .entity-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
   .entity-actions .btn {
     border-radius: 6px;
     margin: 0 1px;
     transition: all 0.2s ease;
     border: none;
+    flex-shrink: 0;
   }
 
   .entity-actions .btn:hover {

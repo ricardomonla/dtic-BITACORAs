@@ -133,6 +133,11 @@ const Navbar = () => {
           transition: all 0.3s ease;
           position: relative;
           overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
         }
 
         .nav-link-modern::before {
@@ -164,7 +169,7 @@ const Navbar = () => {
         }
 
         .nav-link-modern i {
-          margin-right: 8px;
+          margin-bottom: 4px;
           font-size: 1.1em;
         }
 

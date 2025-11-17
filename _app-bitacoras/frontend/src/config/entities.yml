@@ -519,9 +519,6 @@ entities:
           formatter: "formatAssignedResources"
         - key: "technician_name"
           label: "Técnico"
-        - key: "created_at"
-          label: "Fecha Creación"
-          formatter: "formatDate"
     filters:
       - key: "technician_id"
         label: "Técnico"
