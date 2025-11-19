@@ -308,21 +308,11 @@ const Reportes = () => {
       {/* Header */}
       <div className="row mb-4">
         <div className="col-12">
-          <div className="d-flex align-items-center justify-content-between mb-3">
-            <div className="d-flex align-items-center">
-              <i className="fas fa-chart-bar fa-2x text-primary me-3"></i>
-              <div>
-                <h1 className="h3 mb-0">Reportes y Estadísticas</h1>
-                <p className="text-muted mb-0">Análisis y reportes del sistema DTIC Bitácoras</p>
-              </div>
-            </div>
-            <div className="btn-group" role="group">
-              <button className="btn btn-light" onClick={() => exportReport('general')}>
-                <i className="fas fa-download me-2"></i>Exportar
-              </button>
-              <button className="btn btn-outline-light" onClick={printReport}>
-                <i className="fas fa-print me-2"></i>Imprimir
-              </button>
+          <div className="d-flex align-items-center mb-3">
+            <i className="fas fa-chart-bar fa-2x text-primary me-3"></i>
+            <div>
+              <h1 className="h3 mb-0">Reportes y Estadísticas</h1>
+              <p className="text-muted mb-0">Análisis y métricas del sistema</p>
             </div>
           </div>
         </div>

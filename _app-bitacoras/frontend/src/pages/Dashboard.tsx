@@ -278,55 +278,8 @@ const Dashboard = () => {
           <div className="d-flex align-items-center mb-3">
             <i className="fas fa-chart-line fa-2x text-primary me-3"></i>
             <div>
-              <h1 className="h3 mb-0">
-                {user ? `Bienvenido de vuelta, ${user.first_name}!` : 'Dashboard - DTIC Bitácoras'}
-              </h1>
-              <p className="text-muted mb-0">
-                {user
-                  ? 'Sistema de Gestión de Tareas y Recursos - Departamento de Tecnología de la Información y Comunicación'
-                  : 'Sistema de Gestión de Tareas y Recursos del DTIC - UTN La Rioja'
-                }
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="row mt-4">
-          <div className="col-md-3">
-            <div className="card h-100 border-0 bg-light">
-              <div className="card-body text-center">
-                <div id="current-date" className="h5 text-muted mb-1">{currentDate}</div>
-                <small className="text-secondary">Fecha Actual</small>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card h-100 border-0 bg-light">
-              <div className="card-body text-center">
-                <div id="current-time" className="h5 text-muted mb-1">{currentTime}</div>
-                <small className="text-secondary">Hora Actual</small>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card h-100 border-0 bg-light">
-              <div className="card-body text-center">
-                <div id="system-status" className="h5 text-success mb-1">
-                  <i className="fas fa-circle text-success me-1"></i>Online
-                </div>
-                <small className="text-secondary">Estado del Sistema</small>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="card h-100 border-0 bg-light">
-              <div className="card-body text-center">
-                <div id="user-status" className="h5 text-primary mb-1">
-                  <i className="fas fa-user text-success me-1"></i>
-                  {user ? 'Conectado' : 'Público'}
-                </div>
-                <small className="text-secondary">Estado de Sesión</small>
-              </div>
+              <h1 className="h3 mb-0">Dashboard</h1>
+              <p className="text-muted mb-0">Panel de control principal del sistema</p>
             </div>
           </div>
         </div>
