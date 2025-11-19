@@ -329,9 +329,184 @@ export const SidebarLayout = ({ children, className = '' }: SidebarLayoutProps) 
             width: 100%;
           }
         }
+
+        /* Application Header Styles */
+        .app-header {
+          position: fixed;
+          top: 80px;
+          left: 280px;
+          right: 0;
+          height: 70px;
+          background: var(--bg-card);
+          border-bottom: 1px solid var(--border-primary);
+          box-shadow: 0 2px 4px var(--shadow-primary);
+          z-index: 1020;
+          transition: left 0.3s ease;
+        }
+
+        .sidebar-layout.has-collapsed-sidebar .app-header {
+          left: 70px;
+        }
+
+        .app-header-content {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0 30px;
+        }
+
+        .app-brand {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .app-logo {
+          font-size: 2rem;
+          color: var(--bg-active);
+        }
+
+        .app-info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .app-name {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-primary);
+          margin: 0;
+          line-height: 1.2;
+        }
+
+        .app-version {
+          font-size: 0.875rem;
+          color: var(--text-secondary);
+          background: var(--bg-active);
+          color: white;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-weight: 500;
+          display: inline-block;
+          margin-top: 2px;
+        }
+
+        /* Application Footer Styles */
+        .app-footer {
+          position: fixed;
+          bottom: 0;
+          left: 280px;
+          right: 0;
+          height: 50px;
+          background: var(--bg-card);
+          border-top: 1px solid var(--border-primary);
+          z-index: 1020;
+          transition: left 0.3s ease;
+        }
+
+        .sidebar-layout.has-collapsed-sidebar .app-footer {
+          left: 70px;
+        }
+
+        .app-footer-content {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 30px;
+        }
+
+        .footer-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          font-size: 0.875rem;
+          color: var(--text-muted);
+        }
+
+        .footer-text {
+          display: flex;
+          align-items: center;
+        }
+
+        .footer-version {
+          font-weight: 500;
+          color: var(--text-secondary);
+        }
+
+        /* Adjust main content for header and footer */
+        .sidebar-main-content {
+          margin-top: 150px;
+          margin-bottom: 50px;
+          min-height: calc(100vh - 200px);
+        }
+
+        /* Mobile responsiveness for header and footer */
+        @media (max-width: 768px) {
+          .app-header {
+            top: 80px;
+            left: 0;
+            height: 60px;
+          }
+
+          .sidebar-layout.has-collapsed-sidebar .app-header {
+            left: 0;
+          }
+
+          .app-header-content {
+            padding: 0 20px;
+          }
+
+          .app-name {
+            font-size: 1.25rem;
+          }
+
+          .app-logo {
+            font-size: 1.5rem;
+          }
+
+          .app-footer {
+            left: 0;
+            height: 45px;
+          }
+
+          .sidebar-layout.has-collapsed-sidebar .app-footer {
+            left: 0;
+          }
+
+          .app-footer-content {
+            padding: 0 20px;
+          }
+
+          .footer-info {
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+          }
+
+          .sidebar-main-content {
+            margin-top: 140px;
+            margin-bottom: 45px;
+            min-height: calc(100vh - 185px);
+          }
+        }
       `}</style>
 
       <Sidebar onToggle={handleSidebarToggle} />
+
+      {/* Application Header */}
+      <header className="app-header">
+        <div className="app-header-content">
+          <div className="app-brand">
+            <i className="fas fa-cogs app-logo"></i>
+            <div className="app-info">
+              <h1 className="app-name">DTIC Bitácoras</h1>
+              <span className="app-version">v{(import.meta as any).env.VERSION}</span>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Floating User Menu */}
       <div className="floating-user-menu">
@@ -387,6 +562,21 @@ export const SidebarLayout = ({ children, className = '' }: SidebarLayoutProps) 
           {children}
         </div>
       </main>
+
+      {/* Application Footer */}
+      <footer className="app-footer">
+        <div className="app-footer-content">
+          <div className="footer-info">
+            <span className="footer-text">
+              <i className="fas fa-university me-2"></i>
+              DTIC - Universidad Tecnológica Nacional
+            </span>
+            <span className="footer-version">
+              Versión {(import.meta as any).env.VERSION}
+            </span>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
