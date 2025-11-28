@@ -408,11 +408,17 @@ const Sistema = () => {
       {/* Header */}
       <div className="row mb-4">
         <div className="col-12">
-          <div className="d-flex align-items-center mb-3">
-            <i className="fas fa-server fa-2x text-primary me-3"></i>
-            <div>
-              <h1 className="h3 mb-0">Sistema - Backup y Restauración</h1>
-              <p className="text-muted mb-0">Gestión de backups de la base de datos</p>
+          <div className="d-flex align-items-center justify-content-between mb-3">
+            <div className="d-flex align-items-center">
+              <i className="fas fa-server fa-2x text-primary me-3"></i>
+              <div>
+                <h1 className="h3 mb-0">Sistema - Backup y Restauración</h1>
+                <p className="text-muted mb-0">Gestión de backups de la base de datos</p>
+              </div>
+            </div>
+            <div className="text-end">
+              <span className="badge bg-primary fs-6">v2.1.0</span>
+              <p className="text-muted small mb-0 mt-1">Versión del Sistema</p>
             </div>
           </div>
         </div>

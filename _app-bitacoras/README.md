@@ -17,33 +17,29 @@ El sistema está diseñado para:
 
 ## 🚀 Inicio Rápido
 
-### Opción 1: Usando Scripts Automatizados (Recomendado)
+### Opción 1: Usando Script Optimizado (Recomendado)
 
 ```bash
-# Configuración inicial
-./setup.sh
+# Configuración inicial automática (primera ejecución)
+./app-run.sh
 
-# Instalación y despliegue interactivo
-./install.sh
-```
-
-### Opción 2: Usando Make
-
-```bash
-# Configuración inicial
-make setup
-
-# Despliegue completo
-make up
+# Iniciar aplicación
+./app-run.sh start
 
 # Ver estado
-make status
+./app-run.sh status
 
-# Ver logs
-make logs
+# Ver logs (requiere aplicación ejecutándose)
+./app-run.sh logs
+
+# Crear backup
+./app-run.sh bd-backup
+
+# Detener aplicación
+./app-run.sh stop
 ```
 
-### Opción 3: Usando Docker Compose Manual
+### Opción 2: Usando Docker Compose Manual
 
 ```bash
 # Clonar el repositorio
@@ -319,35 +315,24 @@ _app-npm/
 ├── docker-compose.yml             # Orquestación de servicios
 ├── docker-compose.override.yml    # Override por entorno
 ├── .env.example                   # Variables de entorno
-├── setup.sh                       # Script de configuración inicial
-├── install.sh                     # Script de instalación y despliegue
-├── Makefile                       # Comandos Make
+├── app-run.sh                     # Script principal optimizado
+├── app-run_lib.sh                 # Biblioteca de funciones compartidas
+├── app-run_deps.sh                # Gestión de dependencias del sistema
 └── README.md                      # Esta documentación
 ```
 
 ## 🛠️ Comandos Disponibles
 
-### Scripts Automatizados
+### Script Optimizado app-run.sh
 
 ```bash
-./setup.sh          # Configuración inicial
-./install.sh        # Menú interactivo de instalación y despliegue
-```
-
-### Comandos Make
-
-```bash
-make help           # Ver todos los comandos disponibles
-make setup          # Configuración inicial
-make up             # Iniciar aplicación
-make down           # Detener aplicación
-make restart        # Reiniciar aplicación
-make logs           # Ver logs
-make status         # Ver estado de contenedores
-make health-check   # Verificar estado de servicios
-make backup         # Crear backup de BD
-make restore        # Restaurar backup de BD
-make clean          # Limpiar contenedores y volúmenes
+./app-run.sh                    # Menú interactivo completo
+./app-run.sh start              # Iniciar aplicación
+./app-run.sh stop               # Detener aplicación
+./app-run.sh restart            # Reiniciar aplicación
+./app-run.sh status             # Ver estado detallado
+./app-run.sh bd-backup          # Crear backup de base de datos
+./app-run.sh bd-restore         # Restaurar backup de base de datos
 ```
 
 ### Docker Compose

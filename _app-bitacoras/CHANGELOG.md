@@ -1,3 +1,21 @@
+## [2.1.0] - 2025-11-28
+
+| Tipo | Descripción |
+|------|-------------|
+| Agregado | **Refactorización Modular del Sistema de Gestión**: Reestructuración completa de `app-run.sh` para mejorar mantenibilidad y escalabilidad |
+| Agregado | **Biblioteca Compartida de Funciones**: Creación de `app-run_lib.sh` con funciones reutilizables (log, success, error, warning, etc.) |
+| Agregado | **Módulo de Gestión de Dependencias**: Nuevo script `app-run_deps.sh` para manejo centralizado de dependencias del sistema |
+| Agregado | **Interfaz API-like para Sub-scripts**: Sub-scripts con argumentos CLI estrictos y códigos de salida estructurados |
+| Agregado | **Visualización de Versión en UI**: Badge de versión agregado en página Sistema para mostrar versión actual al usuario |
+| Mejorado | **Principio DRY Aplicado**: Eliminación de código duplicado y centralización de funciones comunes |
+| Mejorado | **Separación de Responsabilidades**: Funciones modulares con responsabilidades claras y bien definidas |
+| Mejorado | **Mantenibilidad del Código**: Reducción significativa de complejidad y mejora en legibilidad del código |
+| Eliminado | **Limpieza de Archivos Redundantes**: Eliminación de `install.sh` y `Makefile` duplicados |
+| Detalles Técnicos | **Arquitectura Modular**: Scripts divididos en biblioteca compartida, gestión de dependencias y lógica principal |
+| Detalles Técnicos | **API de Sub-scripts**: Interfaz consistente con argumentos CLI y códigos de retorno estandarizados |
+| Detalles Técnicos | **Versionado Sincronizado**: Actualización de versiones en `package.json` backend y frontend a v2.1.0 |
+| Detalles Técnicos | **UI de Versión**: Implementación de badge visual en interfaz de usuario para mostrar versión del sistema |
+
 ## [2.0.0] - 2025-11-17
 
 | Tipo | Descripción |
