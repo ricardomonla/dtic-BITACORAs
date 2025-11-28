@@ -417,7 +417,7 @@ const Sistema = () => {
               </div>
             </div>
             <div className="text-end">
-              <span className="badge bg-primary fs-6">v2.1.0</span>
+              <span className="badge bg-primary fs-6">v2.1.1</span>
               <p className="text-muted small mb-0 mt-1">Versión del Sistema</p>
             </div>
           </div>

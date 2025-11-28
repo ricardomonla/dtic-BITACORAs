@@ -1,3 +1,14 @@
+## [2.1.1] - 2025-11-28
+
+| Tipo | Descripción |
+|------|-------------|
+| Eliminado | **Limpieza de Archivos Históricos**: Eliminación de archivos obsoletos y documentación histórica movida a directorio _basurero |
+| Eliminado | **Archivos de Bitácoras Antiguas**: Remoción de archivos de bitácoras anteriores y estados del sistema |
+| Eliminado | **Documentación Duplicada**: Eliminación de archivos de documentación redundantes y prompts obsoletos |
+| Eliminado | **Archivos Temporales**: Limpieza de archivos temporales y de desarrollo no utilizados |
+| Detalles Técnicos | **Optimización del Repositorio**: Reducción significativa del tamaño del repositorio eliminando archivos innecesarios |
+| Detalles Técnicos | **Mantenimiento de Historial**: Preservación de archivos históricos en directorio _basurero para referencia futura |
+
 ## [2.1.0] - 2025-11-28
 
 | Tipo | Descripción |
