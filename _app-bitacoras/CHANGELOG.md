@@ -1,3 +1,16 @@
+## [2.1.2] - 2025-11-29
+
+| Tipo | Descripción |
+|------|-------------|
+| Agregado | **Documentación Integral Bilingüe del Sistema**: Creación de documentación completa en inglés y español para todos los módulos del sistema |
+| Agregado | **Índice de Documentación Interactivo**: Nuevo archivo index.md con navegación completa de todos los módulos |
+| Agregado | **Documentación de Arquitectura**: Documentación detallada de componentes, APIs, esquemas de base de datos y flujos de trabajo |
+| Agregado | **Guías de Desarrollo**: Documentación de procesos de desarrollo, convenciones de código y mejores prácticas |
+| Mejorado | **Organización de Documentación**: Estructura jerárquica con tabla de contenidos en cada archivo |
+| Mejorado | **Accesibilidad de Información**: Documentación disponible en español para facilitar el acceso a desarrolladores locales |
+| Detalles Técnicos | **Documentación de 11 Módulos**: Authentication, Dashboard, Technicians, Resources, Tasks, Users, Reports, Calendar, Project Status, System, Task-Resources |
+| Detalles Técnicos | **Versionado Sincronizado**: Actualización de versiones en package.json frontend, backend y visualización en UI |
+
 ## [2.1.1] - 2025-11-28
 
 | Tipo | Descripción |
