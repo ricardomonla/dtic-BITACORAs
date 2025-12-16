@@ -124,21 +124,45 @@ router.post('/restore', [
       });
     }
 
-    // Comando pg_restore
-    const pgRestoreCommand = `pg_restore --host=${dbConfig.host} --port=${dbConfig.port} --username=${dbConfig.username} --dbname=${dbConfig.database} --no-password --clean --if-exists --create ${backupPath}`;
-
-    // Ejecutar pg_restore
+    // Usar Docker para ejecutar psql en el contenedor de PostgreSQL
+    const tempBackupName = `temp_restore_${Date.now()}.sql`;
+    const dockerCpCommand = `docker cp ${backupPath} dtic_bitacoras_postgres:/tmp/${tempBackupName}`;
     await new Promise((resolve, reject) => {
-      const child = exec(pgRestoreCommand, {
-        env: { ...process.env, PGPASSWORD: dbConfig.password }
-      }, (error, stdout, stderr) => {
+      const child = exec(dockerCpCommand, (error, stdout, stderr) => {
         if (error) {
-          console.error('Error en pg_restore:', error);
+          console.error('Error copiando backup al contenedor:', error);
+          console.error('Stderr:', stderr);
+          reject(new Error(`Error copiando backup: ${error.message}`));
+          return;
+        }
+        console.log('Backup copiado al contenedor exitosamente');
+        resolve();
+      });
+    });
+
+    // Ejecutar psql dentro del contenedor PostgreSQL
+    const dockerPsqlCommand = `docker exec -e PGPASSWORD=${dbConfig.password} dtic_bitacoras_postgres psql -h localhost -p 5432 -U ${dbConfig.username} -d ${dbConfig.database} -f /tmp/${tempBackupName}`;
+    await new Promise((resolve, reject) => {
+      const child = exec(dockerPsqlCommand, (error, stdout, stderr) => {
+        if (error) {
+          console.error('Error en psql dentro del contenedor:', error);
           console.error('Stderr:', stderr);
           reject(new Error(`Error restaurando backup: ${error.message}`));
           return;
         }
         console.log('Backup restaurado exitosamente:', backup_file);
+        resolve();
+      });
+    });
+
+    // Limpiar archivo temporal del contenedor
+    const dockerRmCommand = `docker exec dtic_bitacoras_postgres rm -f /tmp/${tempBackupName}`;
+    await new Promise((resolve, reject) => {
+      const child = exec(dockerRmCommand, (error, stdout, stderr) => {
+        if (error) {
+          console.warn('Advertencia: No se pudo limpiar archivo temporal del contenedor:', error.message);
+          // No rechazamos aquí, ya que la restauración ya se completó exitosamente
+        }
         resolve();
       });
     });
