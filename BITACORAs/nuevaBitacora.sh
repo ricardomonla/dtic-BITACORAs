@@ -1,30 +1,58 @@
 #!/bin/bash
 # ============================================================
-#  nuevaBitacora.sh - Generador de nueva bitácora en formato .md
+#  nuevaBitacora.sh - Generador Automático de Bitácora Semanal
+#  Autor: Lic. Ricardo MONLA (DTIC)
 #  ------------------------------------------------------------
-#  Uso: ./nuevaBitacora.sh archivo_anterior.md
+#  Funcionalidad:
+#  1. Detecta automáticamente la semana actual (Lunes a Domingo).
+#  2. Genera tablas vacías para cada día.
+#  3. Incluye instrucciones (Prompt) para la IA al inicio.
 # ============================================================
 
-# Fecha e ID para la nueva bitácora
-ID_NEW=$(date +"%y%m%d")
-FECHA_NEW=$(date +"%d/%m/%Y")
-FILE_NEW="bitacora_${ID_NEW}.md"
+# --- 1. CÁLCULO DE FECHAS (Semana Lunes-Domingo) ---
 
-echo "📘 Generando $FILE_NEW a partir de $FILE_ANT ..."
+# Día actual de la semana (1=Lunes ... 7=Domingo)
+DOW=$(date +%u)
 
-# --- Crear nueva bitácora ---
-cat > "$FILE_NEW" <<EOF
-**Corrige y completa la bitácora del ${FECHA_NEW}** siguiendo el formato institucional DTIC:
+# Calcular offset para volver al Lunes
+DIAS_ATRAS=$((DOW - 1))
 
-* Ortografía y gramática revisadas.
-* Tono técnico-administrativo.
-* Coherencia cronológica.
-* Sección “Conclusión del día” redactada profesionalmente.
-* “Resumen por Recurso” y “Pendientes” completados con base en la cronología.
+# Fecha de Inicio (Lunes de esta semana)
+FECHA_INICIO_FULL=$(date -d "-$DIAS_ATRAS days" +%Y-%m-%d)
 
+# Fecha de Fin (Domingo de esta semana - sumamos 6 días al lunes)
+FECHA_FIN_FULL=$(date -d "$FECHA_INICIO_FULL + 6 days" +%Y-%m-%d)
 
-# 📊 Bitácora SERVIDORES - 📅 ${FECHA_NEW}
+# Variables para nombres y títulos
+YY=$(date -d "$FECHA_INICIO_FULL" +%y)
+MM=$(date -d "$FECHA_INICIO_FULL" +%m)
+DD_INICIO=$(date -d "$FECHA_INICIO_FULL" +%d)
+DD_FIN=$(date -d "$FECHA_FIN_FULL" +%d)
 
+# Nombre del archivo: Bitacora_AAMM_DDalDD.md
+FILE_NAME="Bitacora_${YY}${MM}_${DD_INICIO}al${DD_FIN}.md"
+
+# Rango legible para el texto (ej: 16/12/2025 al 22/12/2025)
+RANGO_TITULO="$(date -d "$FECHA_INICIO_FULL" +%d/%m/%Y) al $(date -d "$FECHA_FIN_FULL" +%d/%m/%Y)"
+
+echo "📘 Semana detectada: $RANGO_TITULO"
+echo "📝 Creando archivo: $FILE_NAME ..."
+
+# --- 2. GENERACIÓN DEL CONTENIDO ---
+
+cat > "$FILE_NAME" <<EOF
+**Corrige, completa y formatea la bitácora de la semana del ${RANGO_TITULO}** siguiendo el formato institucional DTIC.
+
+**Instrucciones para la IA:**
+1. **Revisión:** Corrige ortografía, gramática y coherencia cronológica. Mantén un tono técnico-administrativo.
+2. **Formato:** Respeta estrictamente la estructura Markdown, los emojis y las tablas.
+3. **Síntesis:** Redacta la sección "Conclusión de la Semana" agrupando los avances en ejes (ej: Gestión, Infraestructura, Backups).
+4. **Resumen:** Completa la tabla "Resumen por Recurso" unificando las tareas repetitivas de la semana.
+5. **Pendientes:** Extrae acciones futuras o tareas inconclusas para la lista final.
+
+---
+
+# 📊 Bitácora SERVIDORES
 **Responsable:** Lic. Ricardo MONLA  
 **Área:** Departamento Servidores y Sistemas de Altas Prestaciones  
 **Oficina:** Dirección de Tecnologías de la Información y la Comunicación (DTIC)  
@@ -34,38 +62,53 @@ cat > "$FILE_NEW" <<EOF
 
 ## ⏱️ Cronología de Actividades
 
+EOF
+
+# --- 3. BUCLE DE DÍAS (Lunes a Domingo) ---
+# Iteramos 7 días (0 a 6) a partir de la FECHA_INICIO_FULL
+for i in {0..6}
+do
+    FECHA_DIA=$(date -d "$FECHA_INICIO_FULL + $i days" +%d/%m/%Y)
+    
+    cat >> "$FILE_NAME" <<EOF
+### 📅 ${FECHA_DIA}
 | Hora        | Recurso         | Detalle |
-|--------------|----------------|----------|
-| 16:00_16:00 | **dtic_RECURSO** | Descarga, subida y envío de enlaces vía WhatsApp correspondientes a grabaciones de Zoom:<br>• [11Oct-1633 SecExtA3 UTNLaRioja](https://youtu.be/Kwm5dUSzx4k) → *Federico MISKOSKI* (\`3804-50-4164\`).|
-| 16:00_16:00 | **dtic_RECURSO** | Ejecución del script \`dticBKPs\` con la opción \`C4. 🚀 Procesar todo y Subir todo\`. |
+|-------------|-----------------|---------|
+| 16:00_21:00 | **dtic_RECURSO** | ... |
+
+EOF
+done
+
+# --- 4. SECCIONES FINALES ---
+
+cat >> "$FILE_NAME" <<EOF
+---
+
+## ✅ Conclusión de la Semana
+*(Espacio para notas rápidas que la IA deberá procesar y redactar)*
+* Hito principal: ...
+* Problema resuelto: ...
 
 ---
 
-## ✅ Conclusión del día
-Redactar una síntesis clara y objetiva de los avances y resultados obtenidos.  
-Debe incluir los ejes principales del trabajo (técnicos, documentales o de coordinación) y, si aplica, las mejoras implementadas o los resultados medibles.
+## 📊 Resumen por Recurso - 📅 ${RANGO_TITULO}
 
----
-
-## 📊 Resumen por Recurso - 📅 ${FECHA_NEW}
-
-| Recurso           | Avance principal |
-|-------------------|------------------|
-| **Recurso 1** | Resumen breve del avance o acción principal. |
-| **Recurso 2** | Descripción de las mejoras o tareas ejecutadas. |
+| Recurso | Avance principal |
+| --- | --- |
+| **dtic_DIGI** | ... |
+| **dtic_BKPs** | ... |
+| **dtic_UPDATEs** | ... |
 
 ---
 
 ## 📌 Pendientes o Próximos pasos
-- Listar acciones a verificar, validar o continuar.  
-- Incluir hitos futuros o tareas que dependan de revisiones posteriores.  
-- Usar redacción en infinitivo (“Verificar...”, “Actualizar...”, “Consolidar...”).  
+* [ ] ...
+* [ ] ...
 
 ---
 
-✍️ *Última edición: ${FECHA_NEW} HH:MM*
-
-
+✍️ *Última edición: $(date +"%d/%m/%Y %H:%M")*
 EOF
 
-echo "✅ Bitácora creada: $FILE_NEW"
+# --- 5. FIN ---
+echo "✅ Bitácora generada exitosamente: $FILE_NAME"
