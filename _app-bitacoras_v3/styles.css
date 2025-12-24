@@ -1,0 +1,107 @@
+body { font-family: 'Inter', sans-serif; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+/* Markdown Preview Styles */
+.markdown-preview {
+    line-height: 1.6;
+    color: #334155;
+}
+.markdown-preview h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3em;
+}
+.markdown-preview h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.markdown-preview h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+    color: #475569;
+}
+.markdown-preview p {
+    margin-bottom: 0.8em;
+}
+/* Lists inside general text */
+.markdown-preview > ul, .markdown-preview > ol {
+    margin-bottom: 0.8em;
+    padding-left: 1.5em;
+    list-style-type: disc;
+}
+.markdown-preview li { margin-bottom: 0.2em; }
+.markdown-preview strong { font-weight: 600; color: #0f172a; }
+.markdown-preview em { font-style: italic; }
+.markdown-preview hr { margin: 1.5em 0; border-color: #e2e8f0; }
+
+/* Table Styles for Markdown */
+.markdown-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+    font-size: 0.85em; /* Slightly smaller for density */
+    table-layout: fixed;
+}
+.markdown-preview th, .markdown-preview td {
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+.markdown-preview th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 2px solid #cbd5e1;
+}
+/* Interactive Rows */
+.markdown-preview tbody tr {
+    transition: background-color 0.15s;
+    cursor: pointer;
+    position: relative;
+}
+.markdown-preview tbody tr:hover {
+    background-color: #eff6ff; /* Light blue hover */
+}
+.markdown-preview tbody tr:hover td {
+    border-color: #bfdbfe;
+}
+/* Lists INSIDE tables (Subtasks) */
+.markdown-preview td ul {
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding-left: 16px;
+    list-style-type: circle;
+    color: #64748b;
+}
+.markdown-preview td li {
+    font-size: 0.95em;
+    margin-bottom: 2px;
+}

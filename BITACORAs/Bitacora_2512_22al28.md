@@ -31,7 +31,7 @@
 ### 📅 23/12/2025
 | Hora        | Recurso         | Detalle |
 |-------------|-----------------|---------|
-| 16:00_21:00 | **dtic_RECURSO** | ... |
+| 16:00_20:45 | **dtic_UPDATEs** | Actualización de paquetes y seguridad del Sistema Operativo en los siguientes recursos: <ul><li>15:52_ - **srvv-FENIX** Se encontró 3 para instalar y se inicia la instalación.</li><li>16:00_ - **srvv-MAURIK** Se encontró 2 para instalar y se inicia la instalación.</li></ul> |
 
 ### 📅 24/12/2025
 | Hora        | Recurso         | Detalle |
