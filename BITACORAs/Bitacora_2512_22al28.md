@@ -1,14 +1,3 @@
-**Corrige, completa y formatea la bitácora de la semana del 22/12/2025 al 28/12/2025** siguiendo el formato institucional DTIC.
-
-**Instrucciones para la IA:**
-1. **Revisión:** Corrige ortografía, gramática y coherencia cronológica. Mantén un tono técnico-administrativo.
-2. **Formato:** Respeta estrictamente la estructura Markdown, los emojis y las tablas.
-3. **Síntesis:** Redacta la sección "Conclusión de la Semana" agrupando los avances en ejes (ej: Gestión, Infraestructura, Backups).
-4. **Resumen:** Completa la tabla "Resumen por Recurso" unificando las tareas repetitivas de la semana.
-5. **Pendientes:** Extrae acciones futuras o tareas inconclusas para la lista final.
-
----
-
 # 📊 Bitácora SERVIDORES
 **Responsable:** Lic. Ricardo MONLA  
 **Área:** Departamento Servidores y Sistemas de Altas Prestaciones  
@@ -36,27 +25,19 @@
 ### 📅 24/12/2025
 | Hora        | Recurso         | Detalle |
 |-------------|-----------------|---------|
-| 16:00_21:00 | **dtic_RECURSO** | ... |
+| 16:00_21:00 | **dtic_RECURSO** | Día no laborable. |
 
 ### 📅 25/12/2025
 | Hora        | Recurso         | Detalle |
 |-------------|-----------------|---------|
-| 16:00_21:00 | **dtic_RECURSO** | ... |
+| 16:00_21:00 | **dtic_RECURSO** | Día no laborable. |
 
 ### 📅 26/12/2025
 | Hora        | Recurso         | Detalle |
 |-------------|-----------------|---------|
-| 16:00_21:00 | **dtic_RECURSO** | ... |
-
-### 📅 27/12/2025
-| Hora        | Recurso         | Detalle |
-|-------------|-----------------|---------|
-| 16:00_21:00 | **dtic_RECURSO** | ... |
-
-### 📅 28/12/2025
-| Hora        | Recurso         | Detalle |
-|-------------|-----------------|---------|
-| 16:00_21:00 | **dtic_RECURSO** | ... |
+| 08:00_12:54 | **dtic_BKPs** | Se realiza backups de los siguientes recursos. <ul><li>08:33 - srvv-FENIX</li><li>12:32 - srvv-MAURIK</li><li>12:50 - srvv-SyAcad-WEB</li></ul> |
+| 12:54_13:03 | **dtic_BKPs** | Se realiza eliminación de backups antiguos.|
+| 13:29_13:29 | **dtic_BKPs** | Se realiza backup de los siguinetes recursos: |
 
 ---
 

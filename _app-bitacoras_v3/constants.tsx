@@ -180,6 +180,14 @@ export const RESOURCES = {
 // --- Quick Templates Definition ---
 export const QUICK_TEMPLATES = [
   {
+    id: 'srv_backup',
+    label: 'Backup de Servidor',
+    icon: <RefreshCw size={14} className="text-blue-600" />,
+    resource: 'dtic_BKPs',
+    detail: 'Se realiza backup de los siguinetes recursos:',
+    subTasks: []
+  },  
+  {
     id: 'os_update',
     label: 'Update S.O.',
     icon: <RefreshCw size={14} className="text-blue-600" />,
