@@ -154,26 +154,29 @@ export const RESOURCES = {
     'dtic_RECURSO'
   ],
   'Servidores Virtuales (SRVV)': [
-    'srvv_SITIO', 
-    'srvv_SITIO0', 
-    'srvv_SITIO2', 
-    'srvv_DTIC', 
-    'srvv_DOCs', 
-    'srvv_DNS', 
-    'srvv_KOHA', 
-    'srvv_DATA', 
-    'srvv_UPTIME', 
-    'srvv_FENIX',
-    'srvv_SCERO',
-    'srvv_MAURIK'
+    'srvv-SITIO', 
+    'srvv-SITIO0', 
+    'srvv-SITIO2', 
+    'srvv-DTIC', 
+    'srvv-DOCs', 
+    'srvv-DNS', 
+    'srvv-KOHA', 
+    'srvv-DATA', 
+    'srvv-UPTIME', 
+    'srvv-FENIX',
+    'srvv-SCERO',
+    'srvv-MAURIK'
   ],
   'PC Virtuales (PCV)': [
-    'pcv_DASU2', 
-    'pcv_DASU3', 
-    'pcv_SERVIIO'
+    'pcv-DASU2', 
+    'pcv-DASU3', 
+    'pcv-SERVIIO'
   ],
   'Servidores Físicos/Otros': [
-    'srv_NS8'
+    'srvv-PMOX1',
+    'srvv-PMOX2',
+    'srvv-PMOX3',
+    'srv-NS8'
   ]
 };
 
